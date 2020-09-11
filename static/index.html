@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array.io demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/main.js"></script>
+  </head>
+<body>
+  <div class="standby">
+    <div class="imgPlace">
+      <img src="img/loader.gif" alt="standby"/>
+    </div>
+  </div>
+  <div id="mainbody">
+    <div id="userFormHolder">
+      <h2>Add a User to the System</h2>
+      <p class="error"></p>
+      <form method="POST" onsubmit="onUserFormEnter(); return false">
+        <select id="availableUsers"/><input type="submit" value="add"/>
+      </form>
+      <h4>Added Users</h4>
+      <ul id="addedUsers"></ul>
+    </div>
+    <div id="questionFormHolder">
+      <form method="POST" onsubmit="onQuestionFormEnter(); return false">
+        <div id="questionsHolder"></div>
+        <p class="error" id="address_zip"></p>
+        <p><input type="submit" value="continue"/></p>
+      </form>
+    </div>
+    <div id="creditReportHolder">
+      <div><button onclick="goBack()">back</button></div>
+      <div><br />Raw Dump:<br /></div>
+      <div id="creditData"></div>
+    </div>
+  </div>
+</body>
+</html>
